@@ -1,2 +1,1 @@
-# Dataman
-CTS-285 Group 2
+This is the cool guys prototypes
