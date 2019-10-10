@@ -17,14 +17,21 @@ def guessing():
     count = 1
     answer = random.randint(9,100)
     print(answer)
-    choice = int(input("Pick a number: "))
-    
+    choice = int(input("Pick a number between 9 and 100: "))
+
+    if choice < 9 or choice > 100:
+        while choice < 9 or choice > 100:
+            choice = int(input("Pick a number between 9 and 100 please: "))
+                 
     while choice != answer:
         count += 1
         bottomNumber = random.randint(9,answer -1)
         topNumber = random.randint(answer + 1,100)
-        print("The number is between ",bottomNumber," and ",topNumber,".",sep = "")
-        
+        if choice < 9 or choice > 100:
+            while choice < 9 or choice > 100:
+                choice = int(input("Pick a number between 9 and 100 please: "))
+
+        print("The number is between ",bottomNumber," and ",topNumber,".",sep = "")           
         if choice < answer:
             choice = int(input("Pick a number: "))
         elif choice > answer:
