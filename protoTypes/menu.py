@@ -14,7 +14,7 @@ def main():
     elif choice == 2:
           mb.memoryBankMenu()
     elif choice == 3:
-          ng.guessing()
+          ng.main()
     else:
           print("exit")
 
