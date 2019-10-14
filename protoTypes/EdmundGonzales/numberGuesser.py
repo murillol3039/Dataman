@@ -3,16 +3,8 @@ import random
 def main():
     
     guessing()
-    
-def numberGuesserMenu():
-
-    option = input("Do you wish to go again? ")
-
-    while option == "y" or option == "yes":
-        guessing()
-
     print("Have a great day!")
-
+    
 def guessing():
     count = 1
     answer = random.randint(9,100)
@@ -37,13 +29,24 @@ def guessing():
         elif choice > answer:
             choice = int(input("Pick a number: "))
 
-        
-    if count == 1:
-        print("Wow, first try. Excellent!")
-    elif count > 1:
-        print("You have guessed right in",count,"tries.")
-    numberGuesserMenu()
+            
+        if count == 1:
+            print("Wow, first try. Excellent!")
+        elif count > 1:
+            print("You have guessed right in",count,"tries.")
+        print("")
+
+    option = input("Do you wish to go again? ")
+    option = option.lower()
+
+    if option == "y":      
+        guessing()
+
 
 if __name__ == "__main__":
     main()
 
+#data validation
+#when user puts number outside range causes errors
+#going between and not on parameters
+#looping back through whole program
