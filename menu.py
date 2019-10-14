@@ -11,7 +11,7 @@ def main():
           memoryBank()
     elif choice == 3:
           numberGuesser()
-    else:
-          print("exit")
+    else:           
+        print("exit")
 
 main()

@@ -7,10 +7,13 @@ def main():
 def numberGuesserMenu():
 
     option = input("Do you wish to go again? ")
+    option = option.lower()
+    print(option)
 
-    while option == "y" or option == "yes":
+    while option == "y":      
         guessing()
-
+        option = input("Do you wish to go again? ")
+             
     print("Have a great day!")
 
 def guessing():

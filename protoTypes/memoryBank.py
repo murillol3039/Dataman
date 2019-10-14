@@ -353,7 +353,7 @@ def add():
         if answer != total3:
             wrong += 1
 
-    print(number4,"*", number44)
+    print(number4,"+", number44)
     answer = int(input("Enter your answer: "))                 
     if answer != total4:
         int(input("Please try again: "))
