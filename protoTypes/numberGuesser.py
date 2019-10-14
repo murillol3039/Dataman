@@ -3,23 +3,12 @@ import random
 def main():
     
     guessing()
-    
-def numberGuesserMenu():
-
-    option = input("Do you wish to go again? ")
-    option = option.lower()
-    print(option)
-
-    while option == "y":      
-        guessing()
-        option = input("Do you wish to go again? ")
-             
     print("Have a great day!")
-
+    
 def guessing():
     count = 1
     answer = random.randint(9,100)
-    print(answer)
+    #print(answer)
     choice = int(input("Pick a number between 9 and 100: "))
 
     if choice < 9 or choice > 100:
@@ -45,7 +34,14 @@ def guessing():
         print("Wow, first try. Excellent!")
     elif count > 1:
         print("You have guessed right in",count,"tries.")
-    numberGuesserMenu()
+    print("")
+
+    option = input("Do you wish to go again? ")
+    option = option.lower()
+
+    if option == "y":      
+        guessing()
+
 
 if __name__ == "__main__":
     main()
