@@ -8,7 +8,7 @@ def main():
 def guessing():
     count = 1
     answer = random.randint(9,100)
-    print(answer)
+    #print(answer)
     choice = int(input("Pick a number between 9 and 100: "))
 
     if choice < 9 or choice > 100:
