@@ -1,3 +1,5 @@
+
+
 def mainMenu():
     print("1.Addition")
     print("2.Subtraction")
@@ -92,5 +94,5 @@ def division():
         print(firstNumber, " / ", secondNumber ," = ", correctAnswer)
         print("The correct answer is", total)
 
-
-mainMenu()
+if __name__ == "__main__":
+    mainMenu()
