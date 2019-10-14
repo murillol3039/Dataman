@@ -521,5 +521,6 @@ def subtract():
             wrong += 1
             
     print("You got",wrong,"wrong answers out of 10.")
-    
-main()
+
+if __name__ == "__main__":
+    main()

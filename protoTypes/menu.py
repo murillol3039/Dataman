@@ -1,5 +1,7 @@
 import numberGuesser as ng
 import AnswerChecker as ac
+import memoryBank as mb
+
 def main():
     print("1) Answer checker")
     print("2) Memory bank")
@@ -10,7 +12,7 @@ def main():
     if choice == 1:
           ac.mainMenu()
     elif choice == 2:
-          memoryBank()
+          mb.memoryBankMenu()
     elif choice == 3:
           ng.guessing()
     else:
