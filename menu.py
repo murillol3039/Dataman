@@ -6,7 +6,8 @@ def main():
     print("1) Answer checker")
     print("2) Memory bank")
     print("3) Number guesser")
-    print("4) Exit")
+    print("4) Pop Quiz")
+    print("5) Exit")
     choice = int(input("Pick an option: "))
 
     if choice == 1:
