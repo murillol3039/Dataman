@@ -4,11 +4,10 @@ def main():
     
     answer = random.randint(10,99)
     guessing(answer)
-    print("Have a great day!")
     
 def guessing(answer):
     try:
-        ##print(answer)
+        print(answer)
         count = 1
         choice = int(input("Pick a number between 9 and 100: "))
 
@@ -42,6 +41,8 @@ def guessing(answer):
 
         if option == "y" or option == "yes":      
             main()
+        else:
+            print("Have a great day!")
 
     except ValueError:
         print("Error: Data must be a number.")
