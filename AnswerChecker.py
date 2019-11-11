@@ -1,5 +1,3 @@
-
-
 def mainMenu():
     print("1.Addition")
     print("2.Subtraction")
@@ -23,76 +21,99 @@ def mainMenu():
         mainMenu()
 
 def addition():
-    count = 1
-    while count <= 2:
-        firstNumber = int(input("Please enter a number: "))
-        secondNumber = int(input("Please enter a second number: "))
-        total = firstNumber + secondNumber
-        correctAnswer = int(input("Please enter what you think the answer will be: "))
-        print(firstNumber, " + ", secondNumber ," = ", correctAnswer)
-        if correctAnswer == total:
-            print("- - -- - - = - - - o")
-        else:
-            print("EEE")
-            count+=1
-    else:
+    try:
+        count = 1
+        while count <= 2:
+            firstNumber = int(input("Please enter a number: "))
+            secondNumber = int(input("Please enter a second number: "))
+            total = firstNumber + secondNumber
+            correctAnswer = int(input("Please enter what you think the answer will be: "))
+            print(firstNumber, " + ", secondNumber ," = ", correctAnswer)
+            if correctAnswer == total:
+                print("- - -- - - = - - - o")
+                count = 3
+            else:
+                print("EEE")
+                count+=1
+        
         print(firstNumber, " + ", secondNumber ," = ", correctAnswer)
         print("The correct answer is", total)
-    
+
+    except ValueError:
+        print("Error. Please enter a number")
+        addition()
+
+
+        
 
 
 def subtraction():
-    count = 1
-    while count <= 2:
-        firstNumber = int(input("Please enter a number: "))
-        secondNumber = int(input("Please enter a second number: "))
-        total = firstNumber - secondNumber
-        correctAnswer = int(input("Please enter what you think the answer will be: "))
-        print(firstNumber, " - ", secondNumber ," = ", correctAnswer)
-        if correctAnswer == total:
-            print("- - -- - - = - - - o")
+    try:
+        count = 1
+        while count <= 2:
+            firstNumber = int(input("Please enter a number: "))
+            secondNumber = int(input("Please enter a second number: "))
+            total = firstNumber - secondNumber
+            correctAnswer = int(input("Please enter what you think the answer will be: "))
+            print(firstNumber, " - ", secondNumber ," = ", correctAnswer)
+            if correctAnswer == total:
+                print("- - -- - - = - - - o")
+                count = 3
+            else:
+                print("EEE")
+                count+=1
         else:
-            print("EEE")
-            count+=1
-    else:
-        print(firstNumber, " - ", secondNumber ," = ", correctAnswer)
-        print("The correct answer is", total)
+            print(firstNumber, " - ", secondNumber ," = ", correctAnswer)
+            print("The correct answer is", total)
+
+    except ValueError:
+        print("Error. Please enter a number")
 
 def multiplication():
-    count = 1
-    while count <= 2:
-        firstNumber = int(input("Please enter a number: "))
-        secondNumber = int(input("Please enter a second number: "))
-        total = firstNumber * secondNumber
-        correctAnswer = int(input("Please enter what you think the answer will be: "))
-        print(firstNumber, " * ", secondNumber ," = ", correctAnswer)
-        if correctAnswer == total:
-            print("- - -- - - = - - - o")
+    try:
+        count = 1
+        while count <= 2:
+            firstNumber = int(input("Please enter a number: "))
+            secondNumber = int(input("Please enter a second number: "))
+            total = firstNumber * secondNumber
+            correctAnswer = int(input("Please enter what you think the answer will be: "))
+            print(firstNumber, " * ", secondNumber ," = ", correctAnswer)
+            if correctAnswer == total:
+                print("- - -- - - = - - - o")
+                count = 3
+            else:
+                print("EEE")
+                count+=1
         else:
-            print("EEE")
-            count+=1
-    else:
-        print(firstNumber, " * ", secondNumber ," = ", correctAnswer)
-        print("The correct answer is", total)
+            print(firstNumber, " * ", secondNumber ," = ", correctAnswer)
+            print("The correct answer is", total)
+
+    except ValueError:
+        print("Error. Please enter a number")
 
 
 
 def division():
-    count = 1
-    while count <= 2:
-        firstNumber = int(input("Please enter a number: "))
-        secondNumber = int(input("Please enter a second number: "))
-        total = firstNumber / secondNumber
-        correctAnswer = int(input("Please enter what you think the answer will be: "))
-        print(firstNumber, " / ", secondNumber ," = ", correctAnswer)
-        if correctAnswer == total:
-            print("- - -- - - = - - - o")
+    try:
+        count = 1
+        while count <= 2:
+            firstNumber = int(input("Please enter a number: "))
+            secondNumber = int(input("Please enter a second number: "))
+            total = firstNumber / secondNumber
+            correctAnswer = int(input("Please enter what you think the answer will be: "))
+            print(firstNumber, " / ", secondNumber ," = ", correctAnswer)
+            if correctAnswer == total:
+                print("- - -- - - = - - - o")
+                count = 3
+            else:
+                print("EEE")
+                count+=1
         else:
-            print("EEE")
-            count+=1
-    else:
-        print(firstNumber, " / ", secondNumber ," = ", correctAnswer)
-        print("The correct answer is", total)
+            print(firstNumber, " / ", secondNumber ," = ", correctAnswer)
+            print("The correct answer is", total)
+
+    except ValueError:
+        print("Error. Please enter a number")
 
 if __name__ == "__main__":
     mainMenu()
