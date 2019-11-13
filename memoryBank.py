@@ -4,76 +4,85 @@ def main():
     memoryBankMenu()    
     
 def memoryBankMenu():
-    print("You will practice ten problems of the same type.")
-    print("1)multiply")
-    print("2)divide")
-    print("3)add")
-    print("4)subtract")
-    option = int(input("Pick an option: "))
+    try:
+        print("You will practice ten problems of the same type.")
+        print("1)multiply")
+        print("2)divide")
+        print("3)add")
+        print("4)subtract")
+        option = int(input("Pick an option: "))
 
-    if option == 1:
-        multiply()
-    elif option == 2:
-        divide()
-    elif option == 3:
-        add()
-    elif option == 4:
-        subtract()
-    else:
-        print("pick a number 1-4")
+        if option == 1:
+            multiply()
+        elif option == 2:
+            divide()
+        elif option == 3:
+            add()
+        elif option == 4:
+            subtract()
+        else:
+            print("pick a number 1-4")
+
+    except ValueError:
+        print("Please enter a valid menu option")
+        memoryBankMenu()
 
 def multiply():
     wrong = 0
     count = 1
-    
-    number = int(input("Pick the first number for the first problem: "))
-    number0 = int(input("Pick the second number for the first problem: "))
-    total = number * number0
-    
-    count += 1  
-    number1 = int(input("Pick the first number for the second problem: "))
-    number11 = int(input("Pick the second number for the second problem: "))
-    total1 = number1 * number11
-    
-    count += 1
-    number2 = int(input("Pick the first number for the third problem: "))
-    number22 = int(input("Pick the second number for the third problem: "))
-    total2 = number2 * number22
-    
-    count += 1
-    number3 = int(input("Pick the first number for the fourth problem: "))
-    number33 = int(input("Pick the second number the fourth problem: "))
-    total3 = number3 * number33
+    try:
+        number = int(input("Pick the first number for the first problem: "))
+        number0 = int(input("Pick the second number for the first problem: "))
+        total = number * number0
+        
+        count += 1  
+        number1 = int(input("Pick the first number for the second problem: "))
+        number11 = int(input("Pick the second number for the second problem: "))
+        total1 = number1 * number11
+        
+        count += 1
+        number2 = int(input("Pick the first number for the third problem: "))
+        number22 = int(input("Pick the second number for the third problem: "))
+        total2 = number2 * number22
+        
+        count += 1
+        number3 = int(input("Pick the first number for the fourth problem: "))
+        number33 = int(input("Pick the second number the fourth problem: "))
+        total3 = number3 * number33
 
-    count += 1
-    number4 = int(input("Pick the first number for the fifth problem: "))
-    number44 = int(input("Pick the second number the fifth problem: "))
-    total4 = number4 * number44
-    
-    count += 1
-    number5 = int(input("Pick the first number for the sixth problem: "))
-    number55 = int(input("Pick the second number the sixth problem: "))
-    total5 = number5 * number55
-    
-    count += 1
-    number6 = int(input("Pick the first number for the seventh problem: "))
-    number66 = int(input("Pick the second number the seventh problem: "))
-    total6 = number6 * number66
-    
-    count += 1
-    number7 = int(input("Pick the first number for the eighth problem: "))
-    number77 = int(input("Pick the second number the eighth problem: "))
-    total7 = number7 * number77
-    
-    count += 1
-    number8 = int(input("Pick the first number for the ninth problem: "))
-    number88 = int(input("Pick the second number the ninth problem: "))
-    total8 = number8 * number88
+        count += 1
+        number4 = int(input("Pick the first number for the fifth problem: "))
+        number44 = int(input("Pick the second number the fifth problem: "))
+        total4 = number4 * number44
+        
+        count += 1
+        number5 = int(input("Pick the first number for the sixth problem: "))
+        number55 = int(input("Pick the second number the sixth problem: "))
+        total5 = number5 * number55
+        
+        count += 1
+        number6 = int(input("Pick the first number for the seventh problem: "))
+        number66 = int(input("Pick the second number the seventh problem: "))
+        total6 = number6 * number66
+        
+        count += 1
+        number7 = int(input("Pick the first number for the eighth problem: "))
+        number77 = int(input("Pick the second number the eighth problem: "))
+        total7 = number7 * number77
+        
+        count += 1
+        number8 = int(input("Pick the first number for the ninth problem: "))
+        number88 = int(input("Pick the second number the ninth problem: "))
+        total8 = number8 * number88
 
-    count += 1
-    number9 = int(input("Pick the first number for the tenth problem: "))
-    number99 = int(input("Pick the second number the tenth problem: "))
-    total9 = number9 * number99
+        count += 1
+        number9 = int(input("Pick the first number for the tenth problem: "))
+        number99 = int(input("Pick the second number the tenth problem: "))
+        total9 = number9 * number99
+
+    except ValueError:
+        print("Error. Please enter a number")
+        multiply()
 
     print(number,"*", number0)
     answer = int(input("Enter your answer: "))                 
@@ -144,61 +153,65 @@ def multiply():
         int(input("Please try again: "))
         if answer != total9:
             wrong += 1
-            
+
     print("You got",wrong,"wrong answers out of 10.")
 
 def divide():
     wrong = 0
     count = 1
-    
-    number = int(input("Pick the first number for the first problem: "))
-    number0 = int(input("Pick the second number for the first problem: "))
-    total = number / number0
-    
-    count += 1  
-    number1 = int(input("Pick the first number for the second problem: "))
-    number11 = int(input("Pick the second number for the second problem: "))
-    total1 = number1 / number11
-    
-    count += 1
-    number2 = int(input("Pick the first number for the third problem: "))
-    number22 = int(input("Pick the second number for the third problem: "))
-    total2 = number2 / number22
-    
-    count += 1
-    number3 = int(input("Pick the first number for the fourth problem: "))
-    number33 = int(input("Pick the second number the fourth problem: "))
-    total3 = number3 / number33
+    try:
+        number = int(input("Pick the first number for the first problem: "))
+        number0 = int(input("Pick the second number for the first problem: "))
+        total = number / number0
+        
+        count += 1  
+        number1 = int(input("Pick the first number for the second problem: "))
+        number11 = int(input("Pick the second number for the second problem: "))
+        total1 = number1 / number11
+        
+        count += 1
+        number2 = int(input("Pick the first number for the third problem: "))
+        number22 = int(input("Pick the second number for the third problem: "))
+        total2 = number2 / number22
+        
+        count += 1
+        number3 = int(input("Pick the first number for the fourth problem: "))
+        number33 = int(input("Pick the second number the fourth problem: "))
+        total3 = number3 / number33
 
-    count += 1
-    number4 = int(input("Pick the first number for the fifth problem: "))
-    number44 = int(input("Pick the second number the fifth problem: "))
-    total4 = number4 / number44
-    
-    count += 1
-    number5 = int(input("Pick the first number for the sixth problem: "))
-    number55 = int(input("Pick the second number the sixth problem: "))
-    total5 = number5 / number55
-    
-    count += 1
-    number6 = int(input("Pick the first number for the seventh problem: "))
-    number66 = int(input("Pick the second number the seventh problem: "))
-    total6 = number6 / number66
-    
-    count += 1
-    number7 = int(input("Pick the first number for the eighth problem: "))
-    number77 = int(input("Pick the second number the eighth problem: "))
-    total7 = number7 / number77
-    
-    count += 1
-    number8 = int(input("Pick the first number for the ninth problem: "))
-    number88 = int(input("Pick the second number the ninth problem: "))
-    total8 = number8 / number88
+        count += 1
+        number4 = int(input("Pick the first number for the fifth problem: "))
+        number44 = int(input("Pick the second number the fifth problem: "))
+        total4 = number4 / number44
+        
+        count += 1
+        number5 = int(input("Pick the first number for the sixth problem: "))
+        number55 = int(input("Pick the second number the sixth problem: "))
+        total5 = number5 / number55
+        
+        count += 1
+        number6 = int(input("Pick the first number for the seventh problem: "))
+        number66 = int(input("Pick the second number the seventh problem: "))
+        total6 = number6 / number66
+        
+        count += 1
+        number7 = int(input("Pick the first number for the eighth problem: "))
+        number77 = int(input("Pick the second number the eighth problem: "))
+        total7 = number7 / number77
+        
+        count += 1
+        number8 = int(input("Pick the first number for the ninth problem: "))
+        number88 = int(input("Pick the second number the ninth problem: "))
+        total8 = number8 / number88
 
-    count += 1
-    number9 = int(input("Pick the first number for the tenth problem: "))
-    number99 = int(input("Pick the second number the tenth problem: "))
-    total9 = number9 / number99
+        count += 1
+        number9 = int(input("Pick the first number for the tenth problem: "))
+        number99 = int(input("Pick the second number the tenth problem: "))
+        total9 = number9 / number99
+
+    except ValueError:
+        print("Error. Please enter a number")
+        divide()
 
     print(number,"/", number0)
     answer = int(input("Enter your answer: "))                 
@@ -275,55 +288,59 @@ def divide():
 def add():
     wrong = 0
     count = 1
-    
-    number = int(input("Pick the first number for the first problem: "))
-    number0 = int(input("Pick the second number for the first problem: "))
-    total = number + number0
-    
-    count += 1  
-    number1 = int(input("Pick the first number for the second problem: "))
-    number11 = int(input("Pick the second number for the second problem: "))
-    total1 = number1 + number11
-    
-    count += 1
-    number2 = int(input("Pick the first number for the third problem: "))
-    number22 = int(input("Pick the second number for the third problem: "))
-    total2 = number2 + number22
-    
-    count += 1
-    number3 = int(input("Pick the first number for the fourth problem: "))
-    number33 = int(input("Pick the second number the fourth problem: "))
-    total3 = number3 + number33
+    try:
+        number = int(input("Pick the first number for the first problem: "))
+        number0 = int(input("Pick the second number for the first problem: "))
+        total = number + number0
+        
+        count += 1  
+        number1 = int(input("Pick the first number for the second problem: "))
+        number11 = int(input("Pick the second number for the second problem: "))
+        total1 = number1 + number11
+        
+        count += 1
+        number2 = int(input("Pick the first number for the third problem: "))
+        number22 = int(input("Pick the second number for the third problem: "))
+        total2 = number2 + number22
+        
+        count += 1
+        number3 = int(input("Pick the first number for the fourth problem: "))
+        number33 = int(input("Pick the second number the fourth problem: "))
+        total3 = number3 + number33
 
-    count += 1
-    number4 = int(input("Pick the first number for the fifth problem: "))
-    number44 = int(input("Pick the second number the fifth problem: "))
-    total4 = number4 + number44
-    
-    count += 1
-    number5 = int(input("Pick the first number for the sixth problem: "))
-    number55 = int(input("Pick the second number the sixth problem: "))
-    total5 = number5 + number55
-    
-    count += 1
-    number6 = int(input("Pick the first number for the seventh problem: "))
-    number66 = int(input("Pick the second number the seventh problem: "))
-    total6 = number6 + number66
-    
-    count += 1
-    number7 = int(input("Pick the first number for the eighth problem: "))
-    number77 = int(input("Pick the second number the eighth problem: "))
-    total7 = number7 + number77
-    
-    count += 1
-    number8 = int(input("Pick the first number for the ninth problem: "))
-    number88 = int(input("Pick the second number the ninth problem: "))
-    total8 = number8 + number88
+        count += 1
+        number4 = int(input("Pick the first number for the fifth problem: "))
+        number44 = int(input("Pick the second number the fifth problem: "))
+        total4 = number4 + number44
+        
+        count += 1
+        number5 = int(input("Pick the first number for the sixth problem: "))
+        number55 = int(input("Pick the second number the sixth problem: "))
+        total5 = number5 + number55
+        
+        count += 1
+        number6 = int(input("Pick the first number for the seventh problem: "))
+        number66 = int(input("Pick the second number the seventh problem: "))
+        total6 = number6 + number66
+        
+        count += 1
+        number7 = int(input("Pick the first number for the eighth problem: "))
+        number77 = int(input("Pick the second number the eighth problem: "))
+        total7 = number7 + number77
+        
+        count += 1
+        number8 = int(input("Pick the first number for the ninth problem: "))
+        number88 = int(input("Pick the second number the ninth problem: "))
+        total8 = number8 + number88
 
-    count += 1
-    number9 = int(input("Pick the first number for the tenth problem: "))
-    number99 = int(input("Pick the second number the tenth problem: "))
-    total9 = number9 + number99
+        count += 1
+        number9 = int(input("Pick the first number for the tenth problem: "))
+        number99 = int(input("Pick the second number the tenth problem: "))
+        total9 = number9 + number99
+
+    except ValueError:
+        print("Error. Please enter a number")
+        add()
 
     print(number,"+", number0)
     answer = int(input("Enter your answer: "))                 
@@ -400,55 +417,59 @@ def add():
 def subtract():
     wrong = 0
     count = 1
-    
-    number = int(input("Pick the first number for the first problem: "))
-    number0 = int(input("Pick the second number for the first problem: "))
-    total = number - number0
-    
-    count += 1  
-    number1 = int(input("Pick the first number for the second problem: "))
-    number11 = int(input("Pick the second number for the second problem: "))
-    total1 = number1 - number11
-    
-    count += 1
-    number2 = int(input("Pick the first number for the third problem: "))
-    number22 = int(input("Pick the second number for the third problem: "))
-    total2 = number2 - number22
-    
-    count += 1
-    number3 = int(input("Pick the first number for the fourth problem: "))
-    number33 = int(input("Pick the second number the fourth problem: "))
-    total3 = number3 - number33
+    try:
+        number = int(input("Pick the first number for the first problem: "))
+        number0 = int(input("Pick the second number for the first problem: "))
+        total = number - number0
+        
+        count += 1  
+        number1 = int(input("Pick the first number for the second problem: "))
+        number11 = int(input("Pick the second number for the second problem: "))
+        total1 = number1 - number11
+        
+        count += 1
+        number2 = int(input("Pick the first number for the third problem: "))
+        number22 = int(input("Pick the second number for the third problem: "))
+        total2 = number2 - number22
+        
+        count += 1
+        number3 = int(input("Pick the first number for the fourth problem: "))
+        number33 = int(input("Pick the second number the fourth problem: "))
+        total3 = number3 - number33
 
-    count += 1
-    number4 = int(input("Pick the first number for the fifth problem: "))
-    number44 = int(input("Pick the second number the fifth problem: "))
-    total4 = number4 - number44
-    
-    count += 1
-    number5 = int(input("Pick the first number for the sixth problem: "))
-    number55 = int(input("Pick the second number the sixth problem: "))
-    total5 = number5 - number55
-    
-    count += 1
-    number6 = int(input("Pick the first number for the seventh problem: "))
-    number66 = int(input("Pick the second number the seventh problem: "))
-    total6 = number6 - number66
-    
-    count += 1
-    number7 = int(input("Pick the first number for the eighth problem: "))
-    number77 = int(input("Pick the second number the eighth problem: "))
-    total7 = number7 - number77
-    
-    count += 1
-    number8 = int(input("Pick the first number for the ninth problem: "))
-    number88 = int(input("Pick the second number the ninth problem: "))
-    total8 = number8 - number88
+        count += 1
+        number4 = int(input("Pick the first number for the fifth problem: "))
+        number44 = int(input("Pick the second number the fifth problem: "))
+        total4 = number4 - number44
+        
+        count += 1
+        number5 = int(input("Pick the first number for the sixth problem: "))
+        number55 = int(input("Pick the second number the sixth problem: "))
+        total5 = number5 - number55
+        
+        count += 1
+        number6 = int(input("Pick the first number for the seventh problem: "))
+        number66 = int(input("Pick the second number the seventh problem: "))
+        total6 = number6 - number66
+        
+        count += 1
+        number7 = int(input("Pick the first number for the eighth problem: "))
+        number77 = int(input("Pick the second number the eighth problem: "))
+        total7 = number7 - number77
+        
+        count += 1
+        number8 = int(input("Pick the first number for the ninth problem: "))
+        number88 = int(input("Pick the second number the ninth problem: "))
+        total8 = number8 - number88
 
-    count += 1
-    number9 = int(input("Pick the first number for the tenth problem: "))
-    number99 = int(input("Pick the second number the tenth problem: "))
-    total9 = number9 - number99
+        count += 1
+        number9 = int(input("Pick the first number for the tenth problem: "))
+        number99 = int(input("Pick the second number the tenth problem: "))
+        total9 = number9 - number99
+
+    except ValueError:
+        print("Error. Please enter a valid number")
+        subtract()
 
     print(number,"-", number0)
     answer = int(input("Enter your answer: "))                 
