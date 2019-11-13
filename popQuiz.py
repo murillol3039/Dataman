@@ -1,24 +1,31 @@
 import csv
+def main():
 
-f = open('problems.csv', 'r')
+    showProblems()
 
-reader = csv.reader(f)
+def showProblems():
+    f = open('problems.csv', 'r')
 
-problems = []
+    reader = csv.reader(f)
 
-print("Here are the problems from the file: ")
+    problems = []
 
-for row in reader:
-    try:
-        problems.append([ int(row[0]), row[1], int(row[2]) ])
-    
-        for item in problems:
-            print(item)
-            
-    except:
-        pass
-    
+    print("Here are the problems from the file: ")
 
+    for row in reader:
+        try:
+            problems.append([ int(row[0]), row[1], int(row[2]) ])
+        
+            for item in problems:
+                print(item)
+                
+        except:
+            pass
+        
+
+
+if __name__ == "__main__":
+    main()
 
 
 
