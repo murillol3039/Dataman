@@ -43,6 +43,14 @@ def addition():
         print("Error. Please enter a number")
         addition()
 
+    option = input("Do you wish to go again? ")
+    option = option.lower()
+
+    if option == "y" or option == "yes":      
+        addition()
+    else:
+        print("Have a great day!")
+
 
         
 
@@ -68,6 +76,17 @@ def subtraction():
 
     except ValueError:
         print("Error. Please enter a number")
+        subtraction()
+
+
+    option = input("Do you wish to go again? ")
+    option = option.lower()
+
+    if option == "y" or option == "yes":      
+        subtraction()
+    else:
+        print("Have a great day!")
+
 
 def multiplication():
     try:
@@ -90,6 +109,16 @@ def multiplication():
 
     except ValueError:
         print("Error. Please enter a number")
+        multiplication()
+
+    option = input("Do you wish to go again? ")
+    option = option.lower()
+
+    if option == "y" or option == "yes":      
+        multiplication()
+    else:
+        print("Have a great day!")
+
 
 
 
@@ -114,6 +143,16 @@ def division():
 
     except ValueError:
         print("Error. Please enter a number")
+        division()
+
+    option = input("Do you wish to go again? ")
+    option = option.lower()
+
+    if option == "y" or option == "yes":      
+        division()
+    else:
+        print("Have a great day!")
+
 
 if __name__ == "__main__":
     mainMenu()
